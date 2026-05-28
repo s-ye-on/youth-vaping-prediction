@@ -1,0 +1,76 @@
+[시작] 01_data_check: C:\Users\User\Documents\청소년 전자담배 행태조사\src\01_data_check.py
+[확인] combined shape: (161703, 245)
+[확인] feature catalog shape: (244, 14)
+[완료] 데이터 구조 확인 결과를 outputs/reports/에 저장했습니다.
+
+[성공] 01_data_check / elapsed=117.0s
+[시작] 02_preprocess: C:\Users\User\Documents\청소년 전자담배 행태조사\src\02_preprocess.py
+[확인] 연도 컬럼: YEAR
+[확인] 선택된 target 후보: TC_EC_MN / 최근 30일 동안 액상형 전자담배 사용
+[근거] selection_score=14
+[확인] target 값 분포
+target_ecig_current
+0.0    156937
+1.0      4766
+Name: count, dtype: int64
+[확인] target 변환 불가 행 제거: 0건
+[완료] 전처리 데이터 저장: C:\Users\User\Documents\청소년 전자담배 행태조사\outputs\processed\processed_individual.csv
+[완료] 제거 컬럼 보고서 저장: C:\Users\User\Documents\청소년 전자담배 행태조사\outputs\reports\preprocess_report.csv
+
+[성공] 02_preprocess / elapsed=141.4s
+[시작] 03_eda: C:\Users\User\Documents\청소년 전자담배 행태조사\src\03_eda.py
+[완료] EDA 표와 그래프를 저장했습니다.
+
+[성공] 03_eda / elapsed=4.1s
+[시작] 04_feature_selection: C:\Users\User\Documents\청소년 전자담배 행태조사\src\04_feature_selection.py
+[완료] 모델 입력 데이터 저장: C:\Users\User\Documents\청소년 전자담배 행태조사\outputs\processed\model_input.csv
+[확인] 최종 모델 입력 shape: (161703, 623)
+
+[성공] 04_feature_selection / elapsed=22.2s
+[시작] 05_train_models: C:\Users\User\Documents\청소년 전자담배 행태조사\src\05_train_models.py
+[학습] logistic_regression
+[학습] random_forest
+[학습] xgboost
+[학습] lightgbm
+[완료] 모델 학습과 저장이 끝났습니다.
+
+C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 1000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=1000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+[성공] 05_train_models / elapsed=59.7s
+[시작] 06_evaluate_models: C:\Users\User\Documents\청소년 전자담배 행태조사\src\06_evaluate_models.py
+[완료] 모델 평가 결과
+              model  accuracy  precision   recall       f1  roc_auc
+      random_forest  0.961602   0.412683 0.845300 0.554604 0.973753
+           lightgbm  0.956563   0.383744 0.884465 0.535256 0.973866
+logistic_regression  0.952409   0.362945 0.904047 0.517951 0.972269
+            xgboost  0.950415   0.355316 0.924935 0.513406 0.975685
+[선정] best model: random_forest
+[해석] 위험군 탐지가 중요하므로 Accuracy보다 Recall과 F1-score를 우선 확인하세요.
+
+[성공] 06_evaluate_models / elapsed=11.5s
+[시작] 07_shap_analysis: C:\Users\User\Documents\청소년 전자담배 행태조사\src\07_shap_analysis.py
+[확인] SHAP 계산 샘플 수: 3,000
+[확인] TreeExplainer 사용
+[완료] SHAP 중요도와 그래프를 저장했습니다.
+
+[성공] 07_shap_analysis / elapsed=154.2s
+[시작] 08_simulation: C:\Users\User\Documents\청소년 전자담배 행태조사\src\08_simulation.py
+[완료] 시뮬레이션 결과를 저장했습니다.
+[주의] 이 결과는 실제 정책 효과가 아니라 모델 기반 가상 변화입니다.
+
+[성공] 08_simulation / elapsed=10.9s
+[시작] 09_make_report_assets: C:\Users\User\Documents\청소년 전자담배 행태조사\src\09_make_report_assets.py
+[완료] 최종 요약 자료를 생성했습니다.
+
+[성공] 09_make_report_assets / elapsed=0.4s
+[완료] 전체 파이프라인 성공 / elapsed=521.6s
