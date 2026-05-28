@@ -1,0 +1,40 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Data files
+*.sav
+*.xlsx
+*.csv
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# PyCharm / JetBrains
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/httpRequests/
+
+
+# Agents
+AGENTS.md
+
+# md
+todo.md
+memo.md
+/data/processed/data.md
