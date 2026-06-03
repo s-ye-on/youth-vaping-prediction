@@ -1,0 +1,21 @@
+팀원에게 공유할 메시지 초안
+
+안녕하세요. 제가 별도로 같은 문제를 재현 실험해본 결과를 정리했습니다.
+
+제 실험은 2021~2025 원본/reduced 데이터셋을 대상으로 Random Forest, XGBoost, LightGBM을 비교했고,
+train 60%, validation 20%, test 20%로 나눈 뒤 validation set에서 F1이 최대가 되는 threshold를 선택하고 test set에서 최종 평가했습니다.
+
+제 결과에서는 F1 기준으로 2021~2025 original with ever_cigarette_use + XGBoost가 가장 좋았습니다.
+
+- threshold: 0.921907
+- Precision: 0.4791
+- Recall: 0.6460
+- F1: 0.5501
+- PR-AUC: 0.5080
+- ROC-AUC: 0.9645
+
+반면 팀원님 결과에서는 LightGBM이 PR-AUC 0.5402로 더 높게 나왔기 때문에,
+데이터셋 파일, split 방식, threshold 선택 방식, LightGBM 하이퍼파라미터,
+categorical 처리 방식이 같은지 확인해보고 싶습니다.
+
+정리 폴더에 제 결과표, threshold 실험 결과, 시각화 결과, 확인 질문을 같이 넣어두었습니다.

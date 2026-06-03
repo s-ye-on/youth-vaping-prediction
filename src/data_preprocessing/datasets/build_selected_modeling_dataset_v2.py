@@ -3,11 +3,11 @@
 import numpy as np
 import pandas as pd
 
-from src.data_preprocessing.project_paths import PROCESSED_DATA_DIR
+from src.data_preprocessing.project_paths import PROCESSED_MODELING_DIR
 
-INPUT_FILE = PROCESSED_DATA_DIR / "selected_modeling_dataset.csv"
+INPUT_FILE = PROCESSED_MODELING_DIR / "selected_modeling_dataset.csv"
 
-OUTPUT_DIR = PROCESSED_DATA_DIR
+OUTPUT_DIR = PROCESSED_MODELING_DIR
 OUTPUT_FILE = OUTPUT_DIR / "selected_modeling_dataset_v2.csv"
 OUTPUT_X_FILE = OUTPUT_DIR / "selected_modeling_X_v2.csv"
 OUTPUT_Y_FILE = OUTPUT_DIR / "selected_modeling_y_v2.csv"

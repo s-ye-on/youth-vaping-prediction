@@ -6,7 +6,7 @@
 import pandas as pd
 import pyreadstat
 
-from src.data_preprocessing.project_paths import PROCESSED_DATA_DIR, PROJECT_ROOT, TABLES_DIR, sav_files
+from src.data_preprocessing.project_paths import PROCESSED_COMBINED_DIR, PROJECT_ROOT, TABLES_DIR, sav_files
 
 
 # ============================================================
@@ -14,7 +14,7 @@ from src.data_preprocessing.project_paths import PROCESSED_DATA_DIR, PROJECT_ROO
 # ============================================================
 FILES = sav_files()
 
-OUTPUT_DATA_DIR = PROCESSED_DATA_DIR
+OUTPUT_DATA_DIR = PROCESSED_COMBINED_DIR
 OUTPUT_TABLE_DIR = TABLES_DIR
 
 OUTPUT_DATA_DIR.mkdir(parents=True, exist_ok=True)

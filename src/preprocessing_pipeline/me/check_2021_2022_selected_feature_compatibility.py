@@ -18,7 +18,7 @@ ALL_YEARS = CHECK_YEARS + REFERENCE_YEARS
 
 TARGET_COL = "current_ecig_use"
 
-SELECTED_DATASET_RELATIVE_PATH = Path("data") / "processed" / "selected_modeling_dataset.csv"
+SELECTED_DATASET_RELATIVE_PATH = Path("data") / "processed" / "modeling" / "selected_modeling_dataset.csv"
 
 OUTPUT_DIR_RELATIVE_PATH = Path("outputs") / "compatibility_check"
 

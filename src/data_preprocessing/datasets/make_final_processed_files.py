@@ -7,23 +7,30 @@ import pyreadstat
 from openpyxl import load_workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 
-from src.data_preprocessing.project_paths import PROCESSED_DATA_DIR, TABLES_DIR, sav_files
+from src.data_preprocessing.project_paths import (
+    PROCESSED_COMBINED_DIR,
+    PROCESSED_ENCODED_DIR,
+    TABLES_DIR,
+    sav_files,
+)
 
 
 # ============================================================
 # 1. 경로 설정
 # ============================================================
-DATA_DIR = PROCESSED_DATA_DIR
+DATA_DIR = PROCESSED_COMBINED_DIR
+ENCODED_DIR = PROCESSED_ENCODED_DIR
 OUTPUT_TABLE_DIR = TABLES_DIR
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
+ENCODED_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_TABLE_DIR.mkdir(parents=True, exist_ok=True)
 
 INPUT_CSV = DATA_DIR / "combined_kyrbs_2023_2025.csv"
 
 HUMAN_READABLE_XLSX = DATA_DIR / "combined_kyrbs_2023_2025.xlsx"
-MODELING_CSV = DATA_DIR / "modeling_dataset_encoded.csv"
-MODELING_XLSX = DATA_DIR / "modeling_dataset_encoded.xlsx"
+MODELING_CSV = ENCODED_DIR / "modeling_dataset_encoded.csv"
+MODELING_XLSX = ENCODED_DIR / "modeling_dataset_encoded.xlsx"
 ENCODING_MAP_XLSX = OUTPUT_TABLE_DIR / "encoding_map.xlsx"
 
 SAV_FILES = sav_files()

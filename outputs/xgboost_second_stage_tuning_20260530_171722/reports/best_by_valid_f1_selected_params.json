@@ -1,0 +1,29 @@
+{
+  "selection_name": "best_by_valid_f1",
+  "selected_trial": 32,
+  "best_threshold_from_valid": 0.924507737159729,
+  "params": {
+    "colsample_bytree": 0.7,
+    "gamma": 2,
+    "learning_rate": 0.05,
+    "max_depth": 3,
+    "min_child_weight": 1,
+    "n_estimators": 700,
+    "reg_alpha": 0.5,
+    "reg_lambda": 2,
+    "subsample": 0.9
+  },
+  "validation": {
+    "pr_auc": 0.5075567052313016,
+    "f1_at_threshold": 0.5500394011032309,
+    "precision_at_threshold": 0.47289972899729,
+    "recall_at_threshold": 0.6572504708097928
+  },
+  "test": {
+    "precision": 0.4722858451672011,
+    "recall": 0.6472065285624607,
+    "f1": 0.5460805084745762,
+    "pr_auc": 0.5078635979652418,
+    "roc_auc": 0.96471966582604
+  }
+}

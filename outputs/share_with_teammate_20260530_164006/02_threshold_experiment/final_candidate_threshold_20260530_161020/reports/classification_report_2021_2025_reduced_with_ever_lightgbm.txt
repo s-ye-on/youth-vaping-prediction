@@ -1,0 +1,20 @@
+[Default threshold = 0.5]
+              precision    recall  f1-score   support
+
+           0       1.00      0.94      0.97     52088
+           1       0.30      0.89      0.45      1593
+
+    accuracy                           0.94     53681
+   macro avg       0.65      0.92      0.71     53681
+weighted avg       0.98      0.94      0.95     53681
+
+
+[Tuned threshold from validation = 0.895586]
+              precision    recall  f1-score   support
+
+           0       0.99      0.98      0.98     52088
+           1       0.46      0.62      0.53      1593
+
+    accuracy                           0.97     53681
+   macro avg       0.72      0.80      0.76     53681
+weighted avg       0.97      0.97      0.97     53681

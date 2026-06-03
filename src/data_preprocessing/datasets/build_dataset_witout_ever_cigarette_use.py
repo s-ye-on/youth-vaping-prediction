@@ -2,6 +2,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from src.data_preprocessing.project_paths import PROCESSED_MODELING_DIR
+
 
 TARGET_COL = "current_ecig_use"
 REMOVE_COL = "ever_cigarette_use"
@@ -65,6 +67,11 @@ def find_input_dataset(project_root: Path) -> Path:
     selected_modeling_dataset_without_ever_cigarette_use.csv 같은 파생 파일도 무시한다.
     selected_modeling_X.csv, selected_modeling_y.csv도 무시한다.
     """
+    direct_path = PROCESSED_MODELING_DIR / INPUT_DATASET_NAME
+
+    if direct_path.exists():
+        return direct_path
+
     candidates = []
 
     for path in project_root.rglob(INPUT_DATASET_NAME):
@@ -94,7 +101,7 @@ def find_input_dataset(project_root: Path) -> Path:
     def score(path: Path) -> tuple[int, int]:
         path_text = str(path).lower()
 
-        processed_score = 1 if "data/processed" in path_text or "data\\processed" in path_text else 0
+        processed_score = 1 if "data/processed/modeling" in path_text or "data\\processed\\modeling" in path_text else 0
         shorter_path_score = -len(path.parts)
 
         return processed_score, shorter_path_score
@@ -215,7 +222,8 @@ def main() -> None:
 
     result = make_without_ever_cigarette_dataset(df)
 
-    output_dir = input_file.parent
+    output_dir = PROCESSED_MODELING_DIR
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     output_dataset_file = output_dir / OUTPUT_DATASET_NAME
     output_x_file = output_dir / OUTPUT_X_NAME

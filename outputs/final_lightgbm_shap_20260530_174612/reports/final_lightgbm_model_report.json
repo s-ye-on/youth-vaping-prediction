@@ -1,0 +1,70 @@
+{
+  "dataset": "/Users/choi-seung-yeon/PyCharmMiscProject/data/processed/modeling/selected_modeling_dataset_2021_2025.csv",
+  "model": "LightGBM",
+  "best_params_from_first_stage_tuning": {
+    "n_estimators": 300,
+    "num_leaves": 15,
+    "max_depth": 8,
+    "learning_rate": 0.03,
+    "subsample": 1.0,
+    "colsample_bytree": 0.8,
+    "min_child_samples": 40,
+    "reg_alpha": 1,
+    "reg_lambda": 10
+  },
+  "best_threshold_from_validation": 0.9117153552749151,
+  "random_state": 42,
+  "split": {
+    "test_size": 0.2,
+    "valid_size_from_train_valid": 0.25,
+    "train_shape": [
+      161040,
+      58
+    ],
+    "valid_shape": [
+      53680,
+      58
+    ],
+    "test_shape": [
+      53681,
+      58
+    ]
+  },
+  "scale_pos_weight": 32.70447886144831,
+  "valid_metrics_at_best_threshold": {
+    "accuracy": 0.9665797317436662,
+    "precision": 0.45703292005130397,
+    "recall": 0.6710608913998745,
+    "f1": 0.5437436419125127,
+    "roc_auc": 0.9643592578841396,
+    "average_precision_pr_auc": 0.5121747888152695,
+    "tn": 50817,
+    "fp": 1270,
+    "fn": 524,
+    "tp": 1069
+  },
+  "test_metrics_at_best_threshold": {
+    "accuracy": 0.967400011177139,
+    "precision": 0.46617837139164153,
+    "recall": 0.6792215944758317,
+    "f1": 0.5528870720490546,
+    "roc_auc": 0.9640386933195193,
+    "average_precision_pr_auc": 0.517083162550883,
+    "tn": 50849,
+    "fp": 1239,
+    "fn": 511,
+    "tp": 1082
+  },
+  "test_metrics_at_default_0_5_threshold": {
+    "accuracy": 0.9267524822562918,
+    "precision": 0.2774500475737393,
+    "recall": 0.9152542372881356,
+    "f1": 0.4258177570093458,
+    "roc_auc": 0.9640386933195193,
+    "average_precision_pr_auc": 0.517083162550883,
+    "tn": 48291,
+    "fp": 3797,
+    "fn": 135,
+    "tp": 1458
+  }
+}

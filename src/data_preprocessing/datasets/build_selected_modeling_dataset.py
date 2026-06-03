@@ -3,12 +3,12 @@
 import numpy as np
 import pandas as pd
 
-from src.data_preprocessing.project_paths import PROCESSED_DATA_DIR, TABLES_DIR
+from src.data_preprocessing.project_paths import PROCESSED_COMBINED_DIR, PROCESSED_MODELING_DIR, TABLES_DIR
 
-INPUT_FILE = PROCESSED_DATA_DIR / "full_combined_kyrbs_2023_2025.csv"
+INPUT_FILE = PROCESSED_COMBINED_DIR / "full_combined_kyrbs_2023_2025.csv"
 CATALOG_FILE = TABLES_DIR / "full_feature_catalog_2023_2025.xlsx"
 
-OUTPUT_DIR = PROCESSED_DATA_DIR
+OUTPUT_DIR = PROCESSED_MODELING_DIR
 OUTPUT_FILE = OUTPUT_DIR / "selected_modeling_dataset.csv"
 OUTPUT_X_FILE = OUTPUT_DIR / "selected_modeling_X.csv"
 OUTPUT_Y_FILE = OUTPUT_DIR / "selected_modeling_y.csv"

@@ -1,0 +1,18 @@
+{
+  "model": "lightgbm",
+  "best_trial": 18,
+  "valid_pr_auc": 0.5121747888152695,
+  "valid_f1_at_threshold": 0.5437436419125127,
+  "best_threshold_from_valid": 0.9117153552749151,
+  "params": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.03,
+    "max_depth": 8,
+    "min_child_samples": 40,
+    "n_estimators": 300,
+    "num_leaves": 15,
+    "reg_alpha": 1,
+    "reg_lambda": 10,
+    "subsample": 1.0
+  }
+}

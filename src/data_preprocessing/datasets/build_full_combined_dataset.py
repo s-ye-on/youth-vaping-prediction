@@ -8,7 +8,7 @@ import pyreadstat
 from openpyxl import load_workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 
-from src.data_preprocessing.project_paths import PROCESSED_DATA_DIR, PROJECT_ROOT, TABLES_DIR, sav_files
+from src.data_preprocessing.project_paths import PROCESSED_COMBINED_DIR, PROJECT_ROOT, TABLES_DIR, sav_files
 
 
 # ============================================================
@@ -16,7 +16,7 @@ from src.data_preprocessing.project_paths import PROCESSED_DATA_DIR, PROJECT_ROO
 # ============================================================
 SAV_FILES = sav_files()
 
-DATA_DIR = PROCESSED_DATA_DIR
+DATA_DIR = PROCESSED_COMBINED_DIR
 TABLE_DIR = TABLES_DIR
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)

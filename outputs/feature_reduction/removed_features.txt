@@ -1,0 +1,12 @@
+[Removed features]
+- fruit_freq
+- academic_performance
+- mother_korean_birth
+- live_with_younger_sibling
+- live_with_older_sibling
+- live_with_grandmother
+
+[Explicitly kept features]
+- subjective_unhealthy_level
+- father_edu_unknown
+- father_absent_by_edu

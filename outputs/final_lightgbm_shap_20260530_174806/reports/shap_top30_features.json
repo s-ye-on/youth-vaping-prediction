@@ -1,0 +1,126 @@
+{
+  "note": "mean_abs_shap 기준 상위 30개 feature입니다. SHAP는 인과관계가 아니라 모델 예측 기여도를 의미합니다.",
+  "sample_size": 5000,
+  "top30_features": [
+    {
+      "feature": "binary__ever_cigarette_use",
+      "mean_abs_shap": 0.7304381816748529
+    },
+    {
+      "feature": "categorical__alcohol_start_age_cat_0.0",
+      "mean_abs_shap": 0.5795074493924127
+    },
+    {
+      "feature": "numeric__INT_SPWD_TM",
+      "mean_abs_shap": 0.2969497258813615
+    },
+    {
+      "feature": "categorical__M_SAD_1.0",
+      "mean_abs_shap": 0.21587786127825956
+    },
+    {
+      "feature": "categorical__alcohol_days_30d_cat_1.0",
+      "mean_abs_shap": 0.1876064421864867
+    },
+    {
+      "feature": "categorical__alcohol_days_30d_cat_0.0",
+      "mean_abs_shap": 0.1338527755066351
+    },
+    {
+      "feature": "categorical__secondhand_smoke_public_1.0",
+      "mean_abs_shap": 0.1203321261140997
+    },
+    {
+      "feature": "numeric__AGE",
+      "mean_abs_shap": 0.11480543291796766
+    },
+    {
+      "feature": "binary__live_with_grandmother",
+      "mean_abs_shap": 0.11016217662428161
+    },
+    {
+      "feature": "categorical__E_SES_3.0",
+      "mean_abs_shap": 0.1054678215340746
+    },
+    {
+      "feature": "numeric__INT_SPWK_TM",
+      "mean_abs_shap": 0.10412622997230092
+    },
+    {
+      "feature": "categorical__YEAR_2021",
+      "mean_abs_shap": 0.09522833550059677
+    },
+    {
+      "feature": "categorical__SEX_1.0",
+      "mean_abs_shap": 0.09429216396662445
+    },
+    {
+      "feature": "categorical__secondhand_smoke_home_1.0",
+      "mean_abs_shap": 0.08308105907591953
+    },
+    {
+      "feature": "categorical__M_SAD_2.0",
+      "mean_abs_shap": 0.07789143517468819
+    },
+    {
+      "feature": "categorical__E_RES_1.0",
+      "mean_abs_shap": 0.07764990405486039
+    },
+    {
+      "feature": "categorical__breakfast_freq_8.0",
+      "mean_abs_shap": 0.07528853500988399
+    },
+    {
+      "feature": "categorical__STYPE_여학교",
+      "mean_abs_shap": 0.06015725055588699
+    },
+    {
+      "feature": "categorical__CITY_대구",
+      "mean_abs_shap": 0.05970802395730475
+    },
+    {
+      "feature": "categorical__fastfood_freq_1.0",
+      "mean_abs_shap": 0.05955920573538265
+    },
+    {
+      "feature": "categorical__fastfood_freq_2.0",
+      "mean_abs_shap": 0.05822394771417479
+    },
+    {
+      "feature": "binary__live_with_mother",
+      "mean_abs_shap": 0.049202948753554125
+    },
+    {
+      "feature": "categorical__secondhand_smoke_public_2.0",
+      "mean_abs_shap": 0.041153697409924715
+    },
+    {
+      "feature": "binary__mother_korean_birth",
+      "mean_abs_shap": 0.0400227694929387
+    },
+    {
+      "feature": "categorical__GRADE_1.0",
+      "mean_abs_shap": 0.0330359232794672
+    },
+    {
+      "feature": "categorical__breakfast_freq_6.0",
+      "mean_abs_shap": 0.02880979706538951
+    },
+    {
+      "feature": "categorical__SCHOOL_특성화계고",
+      "mean_abs_shap": 0.025765238783760965
+    },
+    {
+      "feature": "categorical__M_STR_1.0",
+      "mean_abs_shap": 0.02358065851954713
+    },
+    {
+      "feature": "categorical__fruit_freq_1.0",
+      "mean_abs_shap": 0.022872920302204083
+    },
+    {
+      "feature": "binary__father_edu_unknown",
+      "mean_abs_shap": 0.022828478458645683
+    }
+  ]
+}

@@ -2,7 +2,6 @@
 # 2. Random Forest
 # 3. XGBoost
 
-from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -26,10 +25,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
+from src.data_preprocessing.project_paths import (
+    PROCESSED_MODELING_DIR,
+    PROCESSED_REDUCED_DIR,
+    PROJECT_ROOT,
+)
 
-PROJECT_ROOT = Path("/Users/choi-seung-yeon/PyCharmMiscProject")
 
-DATA_DIR = PROJECT_ROOT / "data" / "processed"
+DATA_DIR = PROCESSED_MODELING_DIR
 OUTPUT_DIR = PROJECT_ROOT / "outputs" / "model_results"
 
 TARGET_COL = "current_ecig_use"
@@ -37,6 +40,12 @@ TARGET_COL = "current_ecig_use"
 DATASET_FILES = [
     DATA_DIR / "selected_modeling_dataset.csv",
     DATA_DIR / "selected_modeling_dataset_without_ever_cigarette_use.csv",
+    DATA_DIR / "selected_modeling_dataset_2021_2025.csv",
+    DATA_DIR / "selected_modeling_dataset_2021_2025_without_ever_cigarette_use.csv",
+    PROCESSED_REDUCED_DIR / "selected_modeling_dataset_reduced_low_importance_removed.csv",
+    PROCESSED_REDUCED_DIR / "selected_modeling_dataset_without_ever_cigarette_use_reduced_low_importance_removed.csv",
+    PROCESSED_REDUCED_DIR / "selected_modeling_dataset_2021_2025_reduced_low_importance_removed.csv",
+    PROCESSED_REDUCED_DIR / "selected_modeling_dataset_2021_2025_without_ever_cigarette_use_reduced_low_importance_removed.csv",
 ]
 
 RANDOM_STATE = 42
@@ -591,7 +600,7 @@ def main() -> None:
     if not all_metrics:
         raise FileNotFoundError(
             "\n실행 가능한 데이터셋이 없습니다.\n"
-            "data/processed 폴더에 selected_modeling_dataset.csv가 있는지 확인하세요.\n"
+            "data/processed/modeling 폴더에 selected_modeling_dataset.csv가 있는지 확인하세요.\n"
         )
 
     combined_metrics = pd.concat(all_metrics, ignore_index=True)
