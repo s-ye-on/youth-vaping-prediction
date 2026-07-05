@@ -17,12 +17,17 @@ env/
 *.sav
 *.xlsx
 *.csv
+*.zip
+*.joblib
+*.pkl
+*.pickle
 
 # macOS
 .DS_Store
 __MACOSX/
 
 # PyCharm / JetBrains
+.idea/
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
